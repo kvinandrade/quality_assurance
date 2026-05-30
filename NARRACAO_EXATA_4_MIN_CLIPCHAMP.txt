@@ -1,0 +1,62 @@
+NARRAÇÃO EXATA PARA COLAR NO CLIPCHAMP
+
+Use esta narração em português do Brasil, com voz natural, tom acadêmico e velocidade normal. Ela foi pensada para acompanhar o vídeo de 4 minutos, seguindo a ordem dos slides.
+
+SLIDE 1 - 0:00 a 0:10
+Olá, meu nome é Kevin Maikon Caetano de Andrade Santos, sou aluno da UniFECAF, na disciplina de Quality Assurance. Esta apresentação trata do monitoramento contínuo de performance para a E-Fecaf Global.
+
+SLIDE 2 - 0:10 a 0:25
+A E-Fecaf Global é uma empresa fictícia de e-commerce que enfrenta lentidão, quedas de sistema e perda de vendas em períodos de grande acesso. Esses problemas prejudicam a experiência do cliente e impactam diretamente os resultados do negócio.
+
+SLIDE 3 - 0:25 a 0:38
+Os principais desafios são lentidão, indisponibilidade, falta de visibilidade e ausência de alertas automáticos. Sem métricas centralizadas, a equipe técnica demora mais para identificar falhas e responder aos incidentes.
+
+SLIDE 4 - 0:38 a 0:54
+A solução proposta cria uma arquitetura de monitoramento contínuo. Aplicações, APIs, servidores e banco de dados expõem métricas. O Prometheus coleta essas informações, o Grafana apresenta dashboards, e o Alertmanager envia notificações automáticas.
+
+SLIDE 5 - 0:54 a 1:09
+As ferramentas escolhidas se complementam. Prometheus coleta métricas, Grafana transforma dados em painéis visuais, Alertmanager organiza alertas, e JMeter e Locust simulam usuários para validar a capacidade da plataforma.
+
+SLIDE 6 - 1:09 a 1:22
+O Prometheus é o núcleo da coleta de métricas. Ele armazena séries temporais, consulta endpoints das aplicações e permite análises com PromQL, acompanhando latência, disponibilidade, erros, CPU e memória.
+
+SLIDE 7 - 1:22 a 1:35
+O Grafana é responsável pela visualização dos dados. Com ele, a equipe acompanha disponibilidade, tempo de resposta, erros, requisições por minuto e consumo de recursos em dashboards técnicos e executivos.
+
+SLIDE 8 - 1:35 a 1:48
+O Alertmanager reduz o tempo de resposta a incidentes. Quando uma regra crítica é atingida, ele envia notificações por e-mail, Teams, Slack ou sistemas de chamados, com possibilidade de escalonamento.
+
+SLIDE 9 - 1:48 a 2:02
+As métricas principais são tempo de resposta, latência, disponibilidade, CPU, memória e taxa de erros. Elas foram escolhidas por estarem diretamente ligadas à estabilidade do e-commerce e à experiência do usuário.
+
+SLIDE 10 - 2:02 a 2:17
+Os alertas terão limites objetivos, como CPU acima de oitenta e cinco por cento, memória acima de noventa por cento, resposta acima de dois segundos, disponibilidade abaixo de noventa e nove por cento e erros acima de cinco por cento.
+
+SLIDE 11 - 2:17 a 2:29
+Neste exemplo, o Prometheus avalia continuamente o uso de CPU. Se o limite configurado for ultrapassado pelo tempo definido, o alerta é enviado ao Alertmanager, que notifica os responsáveis.
+
+SLIDE 12 - 2:29 a 2:43
+O JMeter será usado para testes de carga nos fluxos críticos: home, busca, produto, carrinho, checkout e pagamento. Ele mede tempo de resposta, throughput, erros e comportamento sob pressão.
+
+SLIDE 13 - 2:43 a 2:57
+O Locust complementa o JMeter com cenários em Python. Ele permite simular comportamentos mais realistas dos usuários e executar testes distribuídos, alcançando volumes maiores de acesso simultâneo.
+
+SLIDE 14 - 2:57 a 3:12
+Na simulação de Black Friday, a carga cresce de mil até vinte mil usuários simultâneos. O objetivo é validar estabilidade, checkout, APIs, banco de dados e capacidade de escalabilidade.
+
+SLIDE 15 - 3:12 a 3:26
+Com os testes e o monitoramento, é possível identificar gargalos como consultas SQL sem índice, CPU elevada, memória excessiva, APIs lentas, falhas em pagamentos e ausência de CDN.
+
+SLIDE 16 - 3:26 a 3:40
+As otimizações recomendadas incluem balanceamento de carga, uso de cache, melhoria das consultas SQL, escalabilidade horizontal, implantação de CDN e revisão contínua da capacidade da infraestrutura.
+
+SLIDE 17 - 3:40 a 3:53
+Os benefícios esperados são maior disponibilidade, melhor tempo de resposta, redução de erros, recuperação mais rápida, menor abandono de carrinho, aumento da satisfação dos clientes e mais confiança na marca.
+
+SLIDE 18 - 3:53 a 4:00
+Conclui-se que o monitoramento contínuo torna a operação preventiva, orientada por dados e preparada para picos de tráfego. Obrigado pela atenção.
+
+
+MENSAGEM PARA COLOCAR NO ENTREGÁVEL
+
+Informo que não realizei a gravação com minha própria voz, pois no momento não me senti em condições adequadas para fazer a narração oral. Ainda assim, busquei entregar o melhor resultado possível, utilizando uma narração organizada e alinhada aos slides, com o objetivo de apresentar o conteúdo de forma clara, profissional e completa.
