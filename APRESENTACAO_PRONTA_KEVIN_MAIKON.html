@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>APRESENTACAO PRONTA - Kevin Maikon</title>
+  <style>
+    @page {
+      size: 13.333in 7.5in;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #e8eef5;
+      color: #122033;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      counter-reset: slide;
+    }
+
+    .slide {
+      position: relative;
+      width: 13.333in;
+      height: 7.5in;
+      overflow: hidden;
+      page-break-after: always;
+      break-after: page;
+      background: #f7fbff;
+      display: flex;
+      flex-direction: column;
+      padding: 0.48in 0.64in 0.44in;
+      counter-increment: slide;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 86% 12%, rgba(39, 174, 96, 0.14), transparent 24%),
+        radial-gradient(circle at 12% 84%, rgba(22, 93, 167, 0.12), transparent 26%);
+      pointer-events: none;
+    }
+
+    .slide > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cover {
+      background:
+        linear-gradient(135deg, rgba(8, 27, 53, 0.96), rgba(13, 57, 104, 0.94)),
+        radial-gradient(circle at 78% 18%, rgba(39, 174, 96, 0.28), transparent 22%);
+      color: #fff;
+    }
+
+    .cover::before {
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 0.52in 0.52in;
+      opacity: 0.65;
+    }
+
+    .kicker {
+      color: #35d078;
+      font-size: 0.18in;
+      text-transform: uppercase;
+      letter-spacing: 0.06in;
+      font-weight: 700;
+      margin-bottom: 0.16in;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 0.56in;
+      line-height: 1.06;
+      letter-spacing: -0.015in;
+      max-width: 8.9in;
+    }
+
+    h2 {
+      color: #0b2d52;
+      font-size: 0.38in;
+      line-height: 1.14;
+      margin-bottom: 0.18in;
+      letter-spacing: -0.006in;
+    }
+
+    h3 {
+      color: #12385f;
+      font-size: 0.205in;
+      margin-bottom: 0.08in;
+    }
+
+    .cover h1 {
+      color: #fff;
+      font-size: 0.62in;
+      max-width: 9.2in;
+      margin-top: 0.58in;
+    }
+
+    .subtitle {
+      margin-top: 0.22in;
+      color: #cfe8ff;
+      font-size: 0.27in;
+      line-height: 1.32;
+      max-width: 8.1in;
+    }
+
+    .identity {
+      margin-top: auto;
+      display: grid;
+      grid-template-columns: 1.05in 1fr;
+      gap: 0.09in 0.22in;
+      width: 7.8in;
+      padding: 0.25in 0.28in;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 0.18in;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(6px);
+      font-size: 0.18in;
+    }
+
+    .identity strong {
+      color: #74eba3;
+      text-transform: uppercase;
+      font-size: 0.135in;
+      letter-spacing: 0.02in;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.3in;
+      align-items: flex-start;
+      margin-bottom: 0.15in;
+    }
+
+    .section-tag {
+      color: #19754a;
+      font-size: 0.13in;
+      font-weight: 800;
+      letter-spacing: 0.03in;
+      text-transform: uppercase;
+      margin-top: 0.08in;
+      white-space: nowrap;
+    }
+
+    .lead {
+      color: #38526d;
+      font-size: 0.205in;
+      line-height: 1.43;
+      max-width: 10.2in;
+      margin-bottom: 0.22in;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.22in;
+      align-items: stretch;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.18in;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.14in;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.92);
+      border: 1px solid #d7e2ee;
+      border-radius: 0.18in;
+      padding: 0.18in;
+      box-shadow: 0 0.06in 0.18in rgba(10, 36, 64, 0.08);
+    }
+
+    .card.dark {
+      background: #0f3158;
+      border-color: #0f3158;
+      color: #fff;
+    }
+
+    .card.dark h3,
+    .card.dark .metric-value {
+      color: #fff;
+    }
+
+    .card.green {
+      border-left: 0.08in solid #20b96f;
+    }
+
+    .card.yellow {
+      border-left: 0.08in solid #f2b84b;
+    }
+
+    .card.red {
+      border-left: 0.08in solid #e95656;
+    }
+
+    ul {
+      margin: 0.08in 0 0;
+      padding-left: 0.22in;
+    }
+
+    li {
+      margin: 0.045in 0;
+      color: #263d55;
+      font-size: 0.165in;
+      line-height: 1.28;
+    }
+
+    .small li {
+      font-size: 0.145in;
+    }
+
+    .large li {
+      font-size: 0.175in;
+    }
+
+    .muted {
+      color: #536b84;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.08in;
+      margin-top: 0.14in;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 0.06in 0.12in;
+      color: #0f3158;
+      background: #dff5ea;
+      border: 1px solid #bce8d2;
+      font-size: 0.135in;
+      font-weight: 700;
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.12in;
+      margin-top: 0.04in;
+    }
+
+    .tool {
+      min-height: 1.15in;
+      background: #fff;
+      border-radius: 0.16in;
+      border: 1px solid #d9e5f1;
+      padding: 0.15in;
+      text-align: center;
+      box-shadow: 0 0.04in 0.14in rgba(10, 36, 64, 0.07);
+    }
+
+    .tool .icon {
+      display: inline-grid;
+      place-items: center;
+      width: 0.42in;
+      height: 0.42in;
+      border-radius: 50%;
+      background: #0f3158;
+      color: #fff;
+      font-weight: 900;
+      font-size: 0.19in;
+      margin-bottom: 0.08in;
+    }
+
+    .tool h3 {
+      font-size: 0.16in;
+      margin-bottom: 0.04in;
+    }
+
+    .tool p {
+      color: #536b84;
+      font-size: 0.125in;
+      line-height: 1.28;
+    }
+
+    .arch {
+      display: grid;
+      grid-template-columns: 1.15fr 0.34fr 1.15fr 0.34fr 1.15fr;
+      gap: 0.08in;
+      align-items: center;
+      margin: 0.12in 0 0.18in;
+    }
+
+    .arch-box {
+      min-height: 0.88in;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 0.12in;
+      border-radius: 0.16in;
+      background: #fff;
+      border: 1px solid #d7e2ee;
+      font-weight: 800;
+      color: #0f3158;
+      box-shadow: 0 0.04in 0.13in rgba(10, 36, 64, 0.07);
+      font-size: 0.16in;
+    }
+
+    .arrow {
+      color: #20a866;
+      font-size: 0.32in;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 0.14in;
+      background: #fff;
+      box-shadow: 0 0.04in 0.14in rgba(10, 36, 64, 0.07);
+      font-size: 0.14in;
+    }
+
+    th {
+      background: #0f3158;
+      color: #fff;
+      text-align: left;
+      padding: 0.1in 0.12in;
+      font-weight: 800;
+    }
+
+    td {
+      border-bottom: 1px solid #e3edf6;
+      padding: 0.095in 0.12in;
+      color: #263d55;
+      vertical-align: top;
+      line-height: 1.25;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .metric-value {
+      color: #0f3158;
+      font-size: 0.28in;
+      font-weight: 900;
+      margin: 0.06in 0;
+    }
+
+    .metric-label {
+      color: #536b84;
+      font-size: 0.13in;
+      line-height: 1.22;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.12in;
+      margin-top: 0.1in;
+    }
+
+    .step {
+      position: relative;
+      min-height: 1.36in;
+      padding: 0.16in;
+      border-radius: 0.18in;
+      background: #fff;
+      border: 1px solid #d7e2ee;
+      box-shadow: 0 0.04in 0.14in rgba(10, 36, 64, 0.06);
+    }
+
+    .step-number {
+      width: 0.32in;
+      height: 0.32in;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #20b96f;
+      color: #fff;
+      font-weight: 900;
+      margin-bottom: 0.08in;
+    }
+
+    .step p {
+      color: #536b84;
+      font-size: 0.128in;
+      line-height: 1.28;
+    }
+
+    .code {
+      white-space: pre-wrap;
+      font-family: Consolas, "Courier New", monospace;
+      color: #dff5ea;
+      background: #071c33;
+      border-radius: 0.14in;
+      padding: 0.16in;
+      font-size: 0.105in;
+      line-height: 1.22;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    }
+
+    .ramp {
+      height: 2.35in;
+      border-left: 0.03in solid #0f3158;
+      border-bottom: 0.03in solid #0f3158;
+      position: relative;
+      margin: 0.08in 0.18in 0.1in 0.16in;
+    }
+
+    .ramp::before {
+      content: "";
+      position: absolute;
+      left: 0.18in;
+      right: 0.2in;
+      bottom: 0.16in;
+      height: 1.72in;
+      background: linear-gradient(135deg, transparent 0 16%, #20b96f 16% 18%, transparent 18% 38%, #20b96f 38% 40%, transparent 40% 62%, #20b96f 62% 64%, transparent 64% 86%, #20b96f 86% 88%, transparent 88%);
+    }
+
+    .ramp .point {
+      position: absolute;
+      width: 0.18in;
+      height: 0.18in;
+      border-radius: 50%;
+      background: #20b96f;
+      border: 0.035in solid #fff;
+      box-shadow: 0 0.03in 0.08in rgba(0,0,0,0.22);
+    }
+
+    .p1 { left: 0.52in; bottom: 0.38in; }
+    .p2 { left: 2.0in; bottom: 0.78in; }
+    .p3 { left: 3.55in; bottom: 1.22in; }
+    .p4 { left: 5.15in; bottom: 1.78in; }
+
+    .ramp-labels {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.1in;
+      font-size: 0.13in;
+      color: #263d55;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 0.8in 0.8in 0.8in;
+      gap: 0.12in;
+      background: #102f54;
+      border-radius: 0.2in;
+      padding: 0.16in;
+      box-shadow: 0 0.08in 0.22in rgba(10, 36, 64, 0.18);
+    }
+
+    .panel {
+      background: #173f6e;
+      border-radius: 0.11in;
+      padding: 0.1in;
+      color: #fff;
+    }
+
+    .panel small {
+      color: #aac8e8;
+      font-size: 0.105in;
+    }
+
+    .panel strong {
+      display: block;
+      margin-top: 0.03in;
+      font-size: 0.19in;
+    }
+
+    .bar {
+      height: 0.07in;
+      margin-top: 0.08in;
+      background: #2d5f91;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: #35d078;
+      border-radius: inherit;
+    }
+
+    .footer {
+      position: absolute;
+      left: 0.64in;
+      right: 0.64in;
+      bottom: 0.19in;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #6a7e93;
+      font-size: 0.115in;
+      z-index: 3;
+    }
+
+    .cover .footer {
+      color: rgba(255,255,255,0.72);
+    }
+
+    .footer::after {
+      content: counter(slide, decimal-leading-zero);
+      color: #20b96f;
+      font-weight: 900;
+      letter-spacing: 0.02in;
+    }
+
+    .references li {
+      font-size: 0.126in;
+      line-height: 1.18;
+      margin: 0.035in 0;
+    }
+  </style>
+</head>
+<body>
+  <section class="slide cover">
+    <div class="kicker">Quality Assurance | UniFECAF</div>
+    <h1>Monitoramento Contínuo de Performance para E-commerce</h1>
+    <p class="subtitle">Solução para a E-Fecaf Global com Prometheus, Grafana, Alertmanager, JMeter e Locust.</p>
+    <div class="badge-row">
+      <span class="badge">Performance</span>
+      <span class="badge">Disponibilidade</span>
+      <span class="badge">Alertas</span>
+      <span class="badge">Testes de Estresse</span>
+    </div>
+    <div class="identity">
+      <strong>Aluno</strong><span>Kevin Maikon Caetano de Andrade Santos</span>
+      <strong>Universidade</strong><span>UniFECAF</span>
+      <strong>Disciplina</strong><span>Quality Assurance</span>
+      <strong>Data</strong><span>30 de maio de 2026</span>
+    </div>
+    <div class="footer"><span>E-Fecaf Global</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Introdução: contexto do desafio</h2>
+        <p class="lead">A E-Fecaf Global é um e-commerce em rápida expansão que enfrenta lentidão, instabilidade e perda de vendas durante campanhas promocionais e picos de acesso.</p>
+      </div>
+      <div class="section-tag">Problema</div>
+    </div>
+    <div class="grid-2">
+      <div class="card red">
+        <h3>Impactos identificados</h3>
+        <ul class="large">
+          <li>Lentidão no carregamento de páginas e no checkout.</li>
+          <li>Quedas do sistema em períodos promocionais.</li>
+          <li>Abandono de carrinho e perda de receita.</li>
+          <li>Reclamações em canais digitais.</li>
+          <li>Dificuldade para encontrar a causa raiz dos incidentes.</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <h3>Objetivo da solução</h3>
+        <ul class="large">
+          <li>Implantar monitoramento contínuo de performance.</li>
+          <li>Visualizar indicadores técnicos e executivos em tempo real.</li>
+          <li>Configurar alertas automáticos para atuação proativa.</li>
+          <li>Executar testes de estresse antes de grandes eventos.</li>
+          <li>Orientar otimizações com base em dados reais.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>Introdução</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Principais desafios da E-Fecaf Global</h2>
+        <p class="lead">Os problemas estão conectados: pouca visibilidade aumenta o tempo de diagnóstico, e a ausência de alertas amplia o impacto financeiro e operacional.</p>
+      </div>
+      <div class="section-tag">Diagnóstico</div>
+    </div>
+    <div class="grid-4">
+      <div class="card red">
+        <h3>Lentidão</h3>
+        <ul>
+          <li>Páginas carregam lentamente.</li>
+          <li>Checkout apresenta atrasos.</li>
+          <li>APIs degradam em horários de pico.</li>
+        </ul>
+      </div>
+      <div class="card red">
+        <h3>Indisponibilidade</h3>
+        <ul>
+          <li>Quedas em promoções.</li>
+          <li>Interrupção da compra.</li>
+          <li>Perda de confiança dos clientes.</li>
+        </ul>
+      </div>
+      <div class="card yellow">
+        <h3>Falta de visibilidade</h3>
+        <ul>
+          <li>Métricas não centralizadas.</li>
+          <li>Gargalos difíceis de localizar.</li>
+          <li>Baixa correlação entre falhas.</li>
+        </ul>
+      </div>
+      <div class="card yellow">
+        <h3>Falta de alertas</h3>
+        <ul>
+          <li>Incidentes descobertos tarde.</li>
+          <li>Resposta e recuperação lentas.</li>
+          <li>Alto risco em datas críticas.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card dark" style="margin-top:0.24in;">
+      <h3>Necessidade central</h3>
+      <p style="font-size:0.19in; line-height:1.34;">Criar uma operação preventiva, orientada por métricas, capaz de detectar degradações antes que elas afetem a experiência do usuário.</p>
+    </div>
+    <div class="footer"><span>Desafios</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Arquitetura de monitoramento contínuo</h2>
+        <p class="lead">A solução combina coleta de métricas, visualização, alertas e testes de carga em um ciclo permanente de melhoria.</p>
+      </div>
+      <div class="section-tag">Solução proposta</div>
+    </div>
+    <div class="arch">
+      <div class="arch-box">Aplicações, APIs, servidores e banco de dados expõem métricas</div>
+      <div class="arrow">→</div>
+      <div class="arch-box">Prometheus coleta, armazena e consulta séries temporais</div>
+      <div class="arrow">→</div>
+      <div class="arch-box">Grafana exibe dashboards e Alertmanager notifica equipes</div>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Medir</h3>
+        <p class="muted">Coleta de latência, tempo de resposta, disponibilidade, erros e recursos.</p>
+      </div>
+      <div class="card">
+        <h3>Alertar</h3>
+        <p class="muted">Notificações por e-mail, Teams, Slack ou sistema de chamados.</p>
+      </div>
+      <div class="card">
+        <h3>Validar</h3>
+        <p class="muted">JMeter e Locust simulam usuários reais e picos de tráfego.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Arquitetura</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Ferramentas propostas</h2>
+        <p class="lead">Cada ferramenta tem um papel específico no ciclo de observabilidade, resposta a incidentes e validação de capacidade.</p>
+      </div>
+      <div class="section-tag">Ferramentas</div>
+    </div>
+    <div class="tool-grid">
+      <div class="tool">
+        <div class="icon">P</div>
+        <h3>Prometheus</h3>
+        <p>Coleta métricas por modelo pull, armazena séries temporais e permite consultas com PromQL.</p>
+      </div>
+      <div class="tool">
+        <div class="icon">G</div>
+        <h3>Grafana</h3>
+        <p>Transforma métricas em dashboards executivos e técnicos em tempo real.</p>
+      </div>
+      <div class="tool">
+        <div class="icon">A</div>
+        <h3>Alertmanager</h3>
+        <p>Agrupa, classifica e envia alertas para os responsáveis conforme severidade.</p>
+      </div>
+      <div class="tool">
+        <div class="icon">J</div>
+        <h3>JMeter</h3>
+        <p>Executa testes estruturados de carga e gera relatórios detalhados de performance.</p>
+      </div>
+      <div class="tool">
+        <div class="icon">L</div>
+        <h3>Locust</h3>
+        <p>Simula usuários com cenários em Python e possibilita execução distribuída.</p>
+      </div>
+    </div>
+    <div class="card green" style="margin-top:0.24in;">
+      <h3>Resultado esperado</h3>
+      <p style="font-size:0.18in; line-height:1.35;">Maior previsibilidade operacional, identificação rápida de gargalos, redução de incidentes e melhoria contínua da experiência do cliente.</p>
+    </div>
+    <div class="footer"><span>Ferramentas propostas</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Métricas essenciais monitoradas</h2>
+        <p class="lead">As métricas foram escolhidas por terem relação direta com disponibilidade, performance, experiência do usuário e impacto financeiro.</p>
+      </div>
+      <div class="section-tag">Métricas</div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Métrica</th>
+          <th>Objetivo</th>
+          <th>Exemplo de uso na E-Fecaf Global</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Tempo de resposta</td><td>Medir a velocidade percebida pelo usuário.</td><td>Checkout deve responder em até 2 segundos.</td></tr>
+        <tr><td>Latência</td><td>Avaliar atraso em APIs e integrações.</td><td>Identificar APIs lentas em horários de pico.</td></tr>
+        <tr><td>Disponibilidade</td><td>Controlar estabilidade do e-commerce.</td><td>Manter disponibilidade acima de 99%.</td></tr>
+        <tr><td>CPU e memória</td><td>Medir saturação e consumo dos serviços.</td><td>Prever necessidade de escala ou investigar vazamentos.</td></tr>
+        <tr><td>Taxa de erros</td><td>Medir falhas em requisições.</td><td>Alertar quando erros superarem 5%.</td></tr>
+      </tbody>
+    </table>
+    <div class="footer"><span>Métricas monitoradas</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Dashboards no Grafana</h2>
+        <p class="lead">Os dashboards centralizam indicadores, reduzem o tempo de diagnóstico e facilitam a comunicação entre áreas técnicas e executivas.</p>
+      </div>
+      <div class="section-tag">Visualização</div>
+    </div>
+    <div class="grid-2">
+      <div class="dashboard">
+        <div class="panel"><small>Disponibilidade</small><strong>99,4%</strong><div class="bar"><span style="width:94%"></span></div></div>
+        <div class="panel"><small>Resposta média</small><strong>1,6s</strong><div class="bar"><span style="width:62%"></span></div></div>
+        <div class="panel"><small>Erros 5xx</small><strong>2,1%</strong><div class="bar"><span style="width:24%"></span></div></div>
+        <div class="panel"><small>Requisições/min</small><strong>42k</strong><div class="bar"><span style="width:78%"></span></div></div>
+        <div class="panel"><small>CPU média</small><strong>71%</strong><div class="bar"><span style="width:71%"></span></div></div>
+        <div class="panel"><small>Memória</small><strong>68%</strong><div class="bar"><span style="width:68%"></span></div></div>
+        <div class="panel"><small>Checkout</small><strong>Operante</strong><div class="bar"><span style="width:88%"></span></div></div>
+        <div class="panel"><small>Pagamento</small><strong>Alerta</strong><div class="bar"><span style="width:52%; background:#f2b84b;"></span></div></div>
+        <div class="panel"><small>Alertas ativos</small><strong>3</strong><div class="bar"><span style="width:34%; background:#e95656;"></span></div></div>
+      </div>
+      <div class="card">
+        <h3>Indicadores recomendados</h3>
+        <ul class="large">
+          <li>Disponibilidade geral do e-commerce.</li>
+          <li>Tempo médio e percentil 95 de resposta.</li>
+          <li>Taxa de erro por serviço.</li>
+          <li>Status do checkout e pagamentos.</li>
+          <li>Uso de CPU, memória, disco e rede.</li>
+          <li>Alertas ativos e histórico de incidentes.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>Dashboards</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Configuração de alertas automáticos</h2>
+        <p class="lead">Alertas devem ser objetivos, acionáveis e configurados com limites alinhados ao histórico real e aos SLAs do negócio.</p>
+      </div>
+      <div class="section-tag">Alertmanager</div>
+    </div>
+    <table>
+      <thead>
+        <tr><th>Condição monitorada</th><th>Severidade</th><th>Ação recomendada</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>CPU acima de 85% por 5 minutos</td><td>Alta</td><td>Verificar saturação e escalar servidores.</td></tr>
+        <tr><td>Memória acima de 90% por 5 minutos</td><td>Alta</td><td>Investigar vazamento ou aumentar recursos.</td></tr>
+        <tr><td>Tempo de resposta acima de 2 segundos</td><td>Crítica</td><td>Avaliar APIs, banco de dados e cache.</td></tr>
+        <tr><td>Disponibilidade abaixo de 99%</td><td>Crítica</td><td>Acionar plano de incidente.</td></tr>
+        <tr><td>Taxa de erro acima de 5%</td><td>Crítica</td><td>Identificar serviço com falha e corrigir.</td></tr>
+      </tbody>
+    </table>
+    <div class="footer"><span>Alertas</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Exemplo de regra Prometheus</h2>
+        <p class="lead">A regra abaixo ilustra como um limite crítico pode gerar alerta, ser classificado e encaminhado pelo Alertmanager.</p>
+      </div>
+      <div class="section-tag">PromQL</div>
+    </div>
+    <div class="grid-2">
+      <pre class="code">groups:
+  - name: e-fecaf-alertas
+    rules:
+      - alert: AltoUsoCPU
+        expr: avg(rate(node_cpu_seconds_total{mode!="idle"}[5m])) * 100 > 85
+        for: 5m
+        labels:
+          severity: alta
+        annotations:
+          summary: "Uso de CPU acima de 85%"
+          description: "Servidores da E-Fecaf Global com CPU elevada por mais de 5 minutos."</pre>
+      <div class="card green">
+        <h3>Fluxo de notificação</h3>
+        <ul class="large">
+          <li>Prometheus avalia a regra continuamente.</li>
+          <li>Ao ultrapassar o limite, o alerta é enviado ao Alertmanager.</li>
+          <li>Alertmanager agrupa e evita notificações duplicadas.</li>
+          <li>Equipe recebe a mensagem por e-mail, Teams, Slack ou chamado.</li>
+          <li>Incidentes críticos podem ser escalonados para DevOps e liderança técnica.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>Exemplo de alerta</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Testes de estresse com JMeter</h2>
+        <p class="lead">O Apache JMeter será usado para validar fluxos críticos com planos de teste estruturados e relatórios técnicos detalhados.</p>
+      </div>
+      <div class="section-tag">JMeter</div>
+    </div>
+    <div class="timeline">
+      <div class="step"><div class="step-number">1</div><h3>Cenários</h3><p>Home, busca, produto, carrinho, checkout e pagamento.</p></div>
+      <div class="step"><div class="step-number">2</div><h3>Usuários</h3><p>Configurar usuários virtuais simultâneos por perfil de navegação.</p></div>
+      <div class="step"><div class="step-number">3</div><h3>Ramp-up</h3><p>Definir crescimento gradual de carga e duração do teste.</p></div>
+      <div class="step"><div class="step-number">4</div><h3>Execução</h3><p>Rodar em ambiente controlado para evitar impacto em clientes reais.</p></div>
+      <div class="step"><div class="step-number">5</div><h3>Análise</h3><p>Avaliar tempo de resposta, throughput, erros e gargalos.</p></div>
+    </div>
+    <div class="card green" style="margin-top:0.22in;">
+      <h3>Benefício</h3>
+      <p style="font-size:0.18in; line-height:1.32;">Identificar limite de capacidade e comparar a performance antes e depois de otimizações, reduzindo riscos em campanhas promocionais.</p>
+    </div>
+    <div class="footer"><span>Testes de estresse</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Testes de estresse com Locust</h2>
+        <p class="lead">O Locust complementa o JMeter com cenários programáveis em Python, permitindo simular comportamentos de usuários de forma flexível e distribuída.</p>
+      </div>
+      <div class="section-tag">Locust</div>
+    </div>
+    <div class="grid-2">
+      <div class="card green">
+        <h3>Vantagens do Locust</h3>
+        <ul class="large">
+          <li>Cenários escritos em código Python.</li>
+          <li>Modelagem de comportamento real de usuários.</li>
+          <li>Execução distribuída para altos volumes.</li>
+          <li>Interface web para acompanhamento em tempo real.</li>
+          <li>Boa integração com pipelines DevOps.</li>
+        </ul>
+      </div>
+      <table>
+        <thead><tr><th>Critério</th><th>JMeter</th><th>Locust</th></tr></thead>
+        <tbody>
+          <tr><td>Abordagem</td><td>Interface e planos</td><td>Código Python</td></tr>
+          <tr><td>Facilidade inicial</td><td>Boa para não programadores</td><td>Melhor para equipes com Python</td></tr>
+          <tr><td>Escalabilidade</td><td>Boa</td><td>Muito boa distribuída</td></tr>
+          <tr><td>Cenários complexos</td><td>Possível, mais visual</td><td>Mais flexível por ser código</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer"><span>JMeter x Locust</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Simulação de Black Friday</h2>
+        <p class="lead">A carga deve crescer progressivamente para validar estabilidade, checkout, APIs, banco de dados e autoscaling.</p>
+      </div>
+      <div class="section-tag">Cenário de teste</div>
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="ramp">
+          <div class="point p1"></div>
+          <div class="point p2"></div>
+          <div class="point p3"></div>
+          <div class="point p4"></div>
+        </div>
+        <div class="ramp-labels">
+          <span>1.000 usuários</span>
+          <span>5.000 usuários</span>
+          <span>10.000 usuários</span>
+          <span>20.000 usuários</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Resultados esperados</h3>
+        <ul class="large">
+          <li>Disponibilidade acima de 99%.</li>
+          <li>Tempo médio de resposta abaixo de 2 segundos.</li>
+          <li>Taxa de erro abaixo de 5%.</li>
+          <li>Checkout funcional durante todo o teste.</li>
+          <li>Identificação objetiva de gargalos em APIs, banco e infraestrutura.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>Black Friday</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Gargalos plausíveis identificados</h2>
+        <p class="lead">Os gargalos devem ser apresentados como resultado da análise das métricas e dos testes, conectando causa técnica ao impacto no cliente.</p>
+      </div>
+      <div class="section-tag">Análise</div>
+    </div>
+    <div class="grid-4">
+      <div class="card red">
+        <h3>Banco de dados</h3>
+        <ul>
+          <li>Consultas sem índice.</li>
+          <li>Busca de produtos lenta.</li>
+          <li>Bloqueios em transações.</li>
+        </ul>
+      </div>
+      <div class="card red">
+        <h3>Servidores</h3>
+        <ul>
+          <li>CPU acima de 85%.</li>
+          <li>Memória acima de 90%.</li>
+          <li>Escala automática insuficiente.</li>
+        </ul>
+      </div>
+      <div class="card yellow">
+        <h3>APIs</h3>
+        <ul>
+          <li>Checkout acima de 2s.</li>
+          <li>Erros 500 em pagamento.</li>
+          <li>Conexões simultâneas limitadas.</li>
+        </ul>
+      </div>
+      <div class="card yellow">
+        <h3>Rede</h3>
+        <ul>
+          <li>Lentidão com serviços externos.</li>
+          <li>Ausência de CDN.</li>
+          <li>Gargalo no balanceador.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>Gargalos</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Propostas de otimização contínua</h2>
+        <p class="lead">As melhorias devem ser priorizadas por evidência, impacto na receita e criticidade dos fluxos de checkout e pagamento.</p>
+      </div>
+      <div class="section-tag">Otimizações</div>
+    </div>
+    <div class="grid-3">
+      <div class="card green"><h3>Balanceamento</h3><p class="muted">Distribuir requisições entre múltiplos servidores e reduzir sobrecarga em uma única instância.</p></div>
+      <div class="card green"><h3>Cache</h3><p class="muted">Aplicar cache em páginas, produtos, sessões e consultas frequentes para aliviar o banco.</p></div>
+      <div class="card green"><h3>SQL otimizado</h3><p class="muted">Criar índices, revisar queries lentas, paginar resultados e reduzir bloqueios.</p></div>
+      <div class="card green"><h3>Escalabilidade horizontal</h3><p class="muted">Adicionar instâncias automaticamente durante picos de acesso e campanhas.</p></div>
+      <div class="card green"><h3>CDN</h3><p class="muted">Distribuir imagens, scripts e arquivos estáticos com menor latência regional.</p></div>
+      <div class="card green"><h3>Revisão contínua</h3><p class="muted">Ajustar limites de alerta, capacidade e SLAs com base em histórico de métricas.</p></div>
+    </div>
+    <div class="footer"><span>Propostas de otimização</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Benefícios esperados</h2>
+        <p class="lead">O monitoramento contínuo transforma a operação de reativa para preventiva, orientada por dados e focada na experiência do cliente.</p>
+      </div>
+      <div class="section-tag">Resultados</div>
+    </div>
+    <div class="grid-4">
+      <div class="card dark"><h3>Disponibilidade</h3><div class="metric-value">+99%</div><p class="metric-label">Meta de estabilidade em períodos críticos.</p></div>
+      <div class="card dark"><h3>Resposta</h3><div class="metric-value">&lt;2s</div><p class="metric-label">Meta para fluxos sensíveis como checkout.</p></div>
+      <div class="card dark"><h3>Erros</h3><div class="metric-value">&lt;5%</div><p class="metric-label">Controle de falhas em requisições críticas.</p></div>
+      <div class="card dark"><h3>Incidentes</h3><div class="metric-value">MTTR</div><p class="metric-label">Redução do tempo médio de recuperação.</p></div>
+    </div>
+    <div class="grid-2" style="margin-top:0.24in;">
+      <div class="card green">
+        <h3>Valor para o cliente</h3>
+        <ul>
+          <li>Navegação mais rápida e estável.</li>
+          <li>Checkout mais confiável.</li>
+          <li>Menos frustração em promoções.</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <h3>Valor para o negócio</h3>
+        <ul>
+          <li>Redução de abandono de carrinho.</li>
+          <li>Aumento de vendas e confiança na marca.</li>
+          <li>Base histórica para planejamento de capacidade.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"><span>Benefícios</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Roadmap de implantação</h2>
+        <p class="lead">A implantação deve seguir uma sequência objetiva, começando pelos serviços que mais impactam receita e experiência do usuário.</p>
+      </div>
+      <div class="section-tag">Próximos passos</div>
+    </div>
+    <div class="timeline">
+      <div class="step"><div class="step-number">1</div><h3>Métricas</h3><p>Instrumentar aplicações, APIs, servidores e banco de dados.</p></div>
+      <div class="step"><div class="step-number">2</div><h3>Dashboards</h3><p>Criar visões executivas e técnicas no Grafana.</p></div>
+      <div class="step"><div class="step-number">3</div><h3>Alertas</h3><p>Definir limites, severidades, responsáveis e escalonamento.</p></div>
+      <div class="step"><div class="step-number">4</div><h3>Testes</h3><p>Executar JMeter e Locust com cenários reais de compra.</p></div>
+      <div class="step"><div class="step-number">5</div><h3>Otimização</h3><p>Revisar gargalos, capacidade, SLAs e planos de resposta.</p></div>
+    </div>
+    <div class="card dark" style="margin-top:0.24in;">
+      <h3>Critério de sucesso</h3>
+      <p style="font-size:0.18in; line-height:1.34;">A operação deve ser capaz de detectar degradações em tempo real, responder com rapidez e validar previamente a capacidade para grandes campanhas.</p>
+    </div>
+    <div class="footer"><span>Roadmap</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Conclusão</h2>
+        <p class="lead">A proposta integra monitoramento, visualização, alertas e testes de performance para preparar a E-Fecaf Global para picos de tráfego.</p>
+      </div>
+      <div class="section-tag">Conclusão</div>
+    </div>
+    <div class="grid-2">
+      <div class="card green">
+        <h3>Resumo da solução</h3>
+        <ul class="large">
+          <li>Prometheus para coleta e análise de métricas.</li>
+          <li>Grafana para dashboards em tempo real.</li>
+          <li>Alertmanager para alertas e escalonamento.</li>
+          <li>JMeter e Locust para testes de performance e estresse.</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <h3>Resultados esperados</h3>
+        <ul class="large">
+          <li>Maior disponibilidade e previsibilidade.</li>
+          <li>Redução de gargalos e incidentes críticos.</li>
+          <li>Melhor experiência do usuário.</li>
+          <li>Apoio à decisão técnica e executiva.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card dark" style="margin-top:0.24in;">
+      <p style="font-size:0.2in; line-height:1.35;">Monitoramento contínuo não é uma ação pontual: é um processo permanente de melhoria, prevenção de falhas e proteção da receita do e-commerce.</p>
+    </div>
+    <div class="footer"><span>Conclusão</span></div>
+  </section>
+
+  <section class="slide">
+    <div class="header">
+      <div>
+        <h2>Referências bibliográficas</h2>
+        <p class="lead">Fontes oficiais e obras técnicas utilizadas para fundamentar a solução proposta.</p>
+      </div>
+      <div class="section-tag">Referências</div>
+    </div>
+    <div class="card">
+      <ul class="references">
+        <li>APACHE SOFTWARE FOUNDATION. <em>Apache JMeter User Manual</em>. Disponível em: https://jmeter.apache.org/usermanual/</li>
+        <li>GRAFANA LABS. <em>Grafana Documentation</em>. Disponível em: https://grafana.com/docs/grafana/latest/</li>
+        <li>LOCUST. <em>Locust Documentation</em>. Disponível em: https://docs.locust.io/</li>
+        <li>PROMETHEUS AUTHORS. <em>Prometheus Documentation</em>. Disponível em: https://prometheus.io/docs/</li>
+        <li>PROMETHEUS AUTHORS. <em>Alertmanager Documentation</em>. Disponível em: https://prometheus.io/docs/alerting/latest/alertmanager/</li>
+        <li>GOOGLE. <em>Site Reliability Engineering: How Google Runs Production Systems</em>. O'Reilly Media, 2016.</li>
+        <li>HUMBLE, Jez; FARLEY, David. <em>Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</em>. Addison-Wesley, 2010.</li>
+        <li>NEWMAN, Sam. <em>Building Microservices</em>. O'Reilly Media, 2021.</li>
+      </ul>
+    </div>
+    <div class="identity" style="margin-top:0.22in; color:#122033; background:#fff; border-color:#d7e2ee; width:7.9in;">
+      <strong style="color:#19754a;">Aluno</strong><span>Kevin Maikon Caetano de Andrade Santos</span>
+      <strong style="color:#19754a;">Universidade</strong><span>UniFECAF</span>
+      <strong style="color:#19754a;">Disciplina</strong><span>Quality Assurance</span>
+      <strong style="color:#19754a;">Tema</strong><span>Monitoramento Contínuo de Performance na E-Fecaf Global</span>
+    </div>
+    <div class="footer"><span>Referências</span></div>
+  </section>
+</body>
+</html>
