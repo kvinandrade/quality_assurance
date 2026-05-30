@@ -1,0 +1,66 @@
+PROMPT PARA USAR NO CLIPCHAMP
+
+Crie uma narração em português do Brasil, com tom acadêmico, profissional e claro, para um vídeo de aproximadamente 4 minutos. A fala deve acompanhar uma apresentação sobre monitoramento contínuo de performance para a empresa fictícia E-Fecaf Global, usando Prometheus, Grafana, Alertmanager, JMeter e Locust. A narração deve ser natural, objetiva e com ritmo moderado, como uma apresentação para professores e avaliadores. Não mencione que o roteiro foi feito por inteligência artificial.
+
+ROTEIRO DE FALA - APROXIMADAMENTE 4 MINUTOS
+
+0:00 a 0:10 - Slide 1: Capa
+Olá, meu nome é Kevin Maikon Caetano de Andrade Santos, sou aluno da UniFECAF, na disciplina de Quality Assurance. Nesta apresentação, vou apresentar uma solução de monitoramento contínuo de performance para a E-Fecaf Global.
+
+0:10 a 0:25 - Slide 2: Introdução
+A E-Fecaf Global é uma empresa fictícia de e-commerce que enfrenta problemas de lentidão, quedas de sistema e perda de vendas durante períodos de alto tráfego, como promoções e datas sazonais. Esses problemas afetam diretamente a experiência do cliente e os resultados do negócio.
+
+0:25 a 0:38 - Slide 3: Principais desafios
+Os principais desafios identificados são lentidão, indisponibilidade, falta de visibilidade e ausência de alertas automáticos. Sem métricas centralizadas, a equipe técnica demora mais para identificar a causa dos problemas e agir de forma preventiva.
+
+0:38 a 0:54 - Slide 4: Arquitetura proposta
+A solução proposta cria uma arquitetura de monitoramento contínuo. As aplicações, APIs, servidores e banco de dados expõem métricas. O Prometheus coleta essas informações, o Grafana apresenta dashboards em tempo real, e o Alertmanager envia alertas automáticos para as equipes responsáveis.
+
+0:54 a 1:09 - Slide 5: Ferramentas propostas
+As ferramentas escolhidas se complementam. O Prometheus coleta métricas, o Grafana transforma essas métricas em painéis visuais, o Alertmanager organiza notificações, e o JMeter e o Locust simulam usuários para validar a capacidade da plataforma em situações de carga elevada.
+
+1:09 a 1:22 - Slide 6: Prometheus
+O Prometheus é o núcleo da coleta de métricas. Ele trabalha com séries temporais, consulta endpoints das aplicações e permite análises com PromQL. Com ele, a empresa consegue acompanhar indicadores como latência, disponibilidade, taxa de erros, CPU e memória.
+
+1:22 a 1:35 - Slide 7: Grafana
+O Grafana é responsável pela visualização dos dados. Ele permite criar dashboards técnicos e executivos, mostrando disponibilidade, tempo de resposta, erros, requisições por minuto e consumo de recursos. Isso facilita decisões rápidas durante incidentes.
+
+1:35 a 1:48 - Slide 8: Alertmanager
+O Alertmanager reduz o tempo de resposta a incidentes. Quando uma regra crítica é atingida, como CPU muito alta ou tempo de resposta acima do limite, ele envia notificações por e-mail, Teams, Slack ou sistemas de chamados, com possibilidade de escalonamento.
+
+1:48 a 2:02 - Slide 9: Métricas monitoradas
+As principais métricas monitoradas serão tempo de resposta, latência, disponibilidade, CPU, memória e taxa de erros. Essas métricas foram escolhidas porque estão diretamente relacionadas à estabilidade do e-commerce e à experiência do usuário.
+
+2:02 a 2:17 - Slide 10: Configuração de alertas
+Os alertas serão configurados com limites objetivos. Por exemplo: CPU acima de 85% por cinco minutos, memória acima de 90%, tempo de resposta acima de dois segundos, disponibilidade abaixo de 99% e taxa de erro acima de 5%. Assim, a equipe consegue agir antes que o problema se torne maior.
+
+2:17 a 2:29 - Slide 11: Exemplo de regra Prometheus
+Um exemplo de regra é o alerta de alto uso de CPU. O Prometheus avalia continuamente a condição definida e, quando o limite é ultrapassado pelo tempo configurado, envia o alerta ao Alertmanager, que notifica os responsáveis pela operação.
+
+2:29 a 2:43 - Slide 12: JMeter
+O JMeter será utilizado para testes de carga e estresse em fluxos críticos, como home, busca, página de produto, carrinho, checkout e pagamento. A ferramenta permite definir usuários virtuais, ramp-up, duração do teste e analisar tempo de resposta, erros e throughput.
+
+2:43 a 2:57 - Slide 13: Locust
+O Locust complementa o JMeter com uma abordagem baseada em Python. Ele permite criar cenários mais flexíveis, simulando o comportamento real dos usuários, além de possibilitar execução distribuída para testar grandes volumes de acesso.
+
+2:57 a 3:12 - Slide 14: Simulação de Black Friday
+Para validar a robustez da plataforma, a proposta inclui uma simulação de Black Friday. A carga aumenta progressivamente de mil até vinte mil usuários simultâneos. O objetivo é verificar estabilidade, checkout, APIs, banco de dados e comportamento de escalabilidade.
+
+3:12 a 3:26 - Slide 15: Gargalos encontrados
+Com os testes e o monitoramento, é possível identificar gargalos como consultas SQL sem índice, CPU elevada, consumo excessivo de memória, APIs lentas, erros em pagamentos e ausência de CDN para conteúdo estático.
+
+3:26 a 3:40 - Slide 16: Otimizações
+As otimizações recomendadas incluem balanceamento de carga, uso de cache, otimização de consultas SQL, escalabilidade horizontal, implantação de CDN e revisão contínua dos limites de alerta e capacidade da infraestrutura.
+
+3:40 a 3:53 - Slide 17: Benefícios esperados
+Os principais benefícios são maior disponibilidade, melhoria do tempo de resposta, redução de erros, menor tempo de recuperação, redução de abandono de carrinho, aumento da satisfação dos clientes e mais confiança na marca.
+
+3:53 a 4:00 - Slide 18: Conclusão
+Conclui-se que o monitoramento contínuo permite que a E-Fecaf Global atue de forma preventiva, orientada por dados, preparada para picos de tráfego e focada em oferecer uma melhor experiência ao usuário. Obrigado pela atenção.
+
+INSTRUÇÃO PARA O CLIPCHAMP
+
+1. Importe o arquivo VIDEO_SLIDES_4_MIN_KEVIN_MAIKON.mp4 no Clipchamp.
+2. Use a opção de gravação de voz ou texto para fala.
+3. Cole o roteiro acima ou leia a fala respeitando os tempos.
+4. Exporte em MP4.
